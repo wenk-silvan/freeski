@@ -1,0 +1,51 @@
+body {
+  padding-bottom: 53px;
+}
+
+footer, .footer {
+  position: fixed;
+  bottom: 0px;
+  width: 100%;
+  padding: 15px;
+}
+
+.tile img {
+  border-radius: 1rem;
+}
+
+.hide {
+  display: none;
+}
+
+#section-content {
+  padding-top: 0px;
+}
+
+/* SMARTPHONES PORTRAIT */
+@media only screen and (min-width: 300px) {
+  #sidebar {
+    display: none;
+  }
+}
+
+/* SMARTPHONES LANDSCAPE */
+@media only screen and (min-width: 480px) {
+  #sidebar {
+    display: none;
+  }
+}
+
+/* TABLETS PORTRAIT */
+@media only screen and (min-width: 768px) {
+
+  #sidebar {
+    display: flex;
+  }
+}
+
+/* TABLET LANDSCAPE / DESKTOP */
+@media only screen and (min-width: 1024px) {
+  #sidebar {
+    display: flex;
+  }
+}  

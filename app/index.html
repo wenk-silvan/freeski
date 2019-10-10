@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Silvan Wenk">
+    
+    <title>Freeski</title>
+    
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.min.css">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+    <script src="methods.js"></script>
+  </head>
+  <body>
+    <section id="section-header" class="section">
+      <div class="container">
+        <h1 class="title">
+          Freestyle Skiing 
+        </h1>
+        <p class="subtitle">
+          An overview on many freeski tricks and grabs.
+        </p>
+      </div>
+    </section>
+
+    <section id="section-content" class="section">
+        <div class="tile is-ancestor">
+            <div class="tile is-vertical is-8">
+              <div class="tile">
+                <div class="tile is-parent is-vertical">
+                  <article class="tile is-child notification is-primary">
+                    <p class="title">Backflip</p>
+                    <p class="subtitle">Full backward rotation around vertical body axis.</p>
+                  </article>
+                  <article class="tile is-child notification is-warning">
+                    <p class="title">Spin 180°</p>
+                    <p class="subtitle">180° spin around vertical body axis, landing switch.</p>
+                  </article>
+                </div>
+                <div class="tile is-parent">
+                  <article class="tile is-child notification is-info">
+                    <p class="title">Rodeo 5</p>
+                    <p class="subtitle">Off-axis back flip over shoulder, landing switch.</p>
+                    <a id="btn-load" onclick="loadImage()" class="button">Load image</a>
+                    <figure class="image is-4by3">
+                      <img id="img-ski">
+                    </figure>
+                  </article>
+                </div>
+              </div>
+              <div class="tile is-parent">
+                <article class="tile is-child notification is-danger">
+                  <p class="title">Cork 7</p>
+                  <p class="subtitle">Off-axis 720° spin, corking towards slope. Legs and head are on same height mid-air.</p>
+                  <div class="content">
+                    <!-- Content -->
+                  </div>
+                </article>
+              </div>
+            </div>
+            <div id="sidebar" class="tile is-parent">
+              <article class="tile is-child notification is-success">
+                <div class="content">
+                  <p class="title">Tall tile</p>
+                  <p class="subtitle">With even more content</p>
+                  <div class="content">
+                    <!-- Content -->
+                  </div>
+                </div>
+              </article>
+            </div>
+        </div>
+    </section>
+
+    <footer id="footer" class="footer">
+      <div class="content has-text-centered">
+        <p>
+          <strong>Freeski</strong> by Silvan Wenk. The source code is licensed
+          <a href="http://opensource.org/licenses/mit-license.php">MIT</a>
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>
