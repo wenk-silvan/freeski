@@ -27,7 +27,6 @@ function imageLoaded(request) {
     removeButton();
     return;
   }
-  console.error("Error while fetching image from server.");
 }
 
 function removeButton() {
