@@ -17,6 +17,14 @@ footer, .footer {
   display: none;
 }
 
+.footer-static {
+  float: left;
+}
+
+.footer-dynamic {
+  float: right;
+}
+
 #section-content {
   padding-top: 0px;
 }

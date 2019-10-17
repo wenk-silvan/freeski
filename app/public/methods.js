@@ -38,6 +38,7 @@ function removeButton() {
 
 function init() {
   setTimeout(function() {
+    checkCookies();
     window.requestAnimationFrame(moveDot);
   }, 100);
   window.requestAnimationFrame(draw);
@@ -71,7 +72,7 @@ function draw() {
 function drawLine() {
   ctx.beginPath();
   ctx.fillStyle = 'white';
-  ctx.fillRect(0, 0, 400, 400);
+  ctx.fillRect(0, 0, this.canvasWidth, this.canvasHeight);
 
   ctx.strokeStyle = 'black';
   ctx.moveTo(0, 100);
@@ -84,6 +85,50 @@ function drawDot(dot) {
   ctx.arc(dot.x, dot.y, dot.radius, 0, 5 * Math.PI, false);
   ctx.fillStyle = 'black';
   ctx.fill();
+}
+
+function checkCookies() {
+  var date = new Date();
+  setCookie("visited", date.toLocaleTimeString());  
+  var username = getCookie("username");
+  var visited = getCookie("visited");
+
+  if (username != "") {
+    setLabelById("username", username);
+    setLabelById("visited", visited);
+  } else {
+    username = prompt("How should I call you?", "");
+    if (username != "" && username != null) {
+      setCookie("username", username);
+    }    
+    checkCookies();
+  }
+}
+
+function getCookie(cname) {
+  var name = cname + "=";
+  var decodedCookie = decodeURIComponent(document.cookie);
+  var ca = decodedCookie.split(';');
+  for(var i = 0; i <ca.length; i++) {
+    var c = ca[i];
+    while (c.charAt(0) == ' ') {
+      c = c.substring(1);
+    }
+    if (c.indexOf(name) == 0) {
+      return c.substring(name.length, c.length);
+    }
+  }
+  return "";
+}
+
+function setCookie(key, value) {
+  document.cookie = key + "=" + value + ";";
+}
+
+function setLabelById(id, text) {
+  var element = document.getElementById(id);
+  if(element == null) return;
+  element.innerHTML = text;
 }
 
 init();

@@ -54,9 +54,6 @@
                 <article class="tile is-child notification is-danger">
                   <p class="title">Cork 7</p>
                   <p class="subtitle">Off-axis 720° spin, corking towards slope. Legs and head are on same height mid-air.</p>
-                  <div class="content">
-                    <!-- Content -->
-                  </div>
                 </article>
               </div>
             </div>
@@ -66,7 +63,6 @@
                   <p class="title">Ski Demo</p>
                   <p class="subtitle">A random skier hitting the slopes.</p>
                   <div class="content">
-                    <!-- Content -->
                     <canvas id="canvas" width="300" height="300"></canvas>
                   </div>
                 </div>
@@ -78,8 +74,13 @@
     <footer id="footer" class="footer">
       <div class="content has-text-centered">
         <p>
-          <strong>Freeski</strong> by Silvan Wenk. The source code is licensed
-          <a href="http://opensource.org/licenses/mit-license.php">MIT</a>
+          <div class="footer-static">
+              <strong>Freeski</strong> &copy; by Silvan Wenk.
+          </div>
+          <div class="footer-dynamic">
+            Welcome <label id="username"></label> |
+            Last visited: <label id="visited"></label>
+          </div>
         </p>
       </div>
     </footer>
